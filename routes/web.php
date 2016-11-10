@@ -11,6 +11,7 @@
 |
 */
 
+
 Route::get('/', function()
 {
     return View::make('home');
@@ -76,3 +77,6 @@ Route::get('/documentation', function()
 {
     return View::make('documentation');
 });
+Auth::routes();
+
+Route::get('/home', 'HomeController@index');
