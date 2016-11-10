@@ -15,6 +15,7 @@ class CreateSallesTable extends Migration
     {
         Schema::create('salles', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('nom');
             $table->integer('batiment_id');
             $table->timestamps();
         });
