@@ -10,8 +10,16 @@ class Examen extends Model
      * @var array
      */
     protected $fillable = [
-        'nom','date_debut','date_fin','heure_debut','heure_fin','examen_id',
+        'date','heure','module_id',
     ];
-    
-    
+
+    public function module()
+    {
+        return $this->belongsTo('App\Module');
+    }
+
+    public function session()
+    {
+        return $this->hasMany('App\Session');
+    }
 }

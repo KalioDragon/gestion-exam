@@ -12,4 +12,14 @@ class Salle extends Model
     protected $fillable = [
         'nom','batiment_id',
     ];
+
+    public function convocation()
+    {
+        return $this->hasMany('App\Convocation');
+    }
+
+    public function batiment()
+    {
+        return $this->belongsTo('App\Batiment');
+    }
 }

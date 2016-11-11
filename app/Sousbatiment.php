@@ -12,4 +12,9 @@ class Sousbatiment extends Model
     protected $fillable = [
         'nom','batiment_id',
     ];
+
+    public function batiment()
+    {
+        return $this->belongsTo('App\Batiment');
+    }
 }

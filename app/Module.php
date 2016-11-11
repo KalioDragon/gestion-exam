@@ -14,4 +14,9 @@ class Module extends Model
     ];
 
 
+    public function examen()
+    {
+        return $this->hasMany('App\Examen');
+    }
+    
 }
